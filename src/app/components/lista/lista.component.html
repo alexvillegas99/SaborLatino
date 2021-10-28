@@ -1,0 +1,24 @@
+
+<ion-item detail (click)="presentModal()" class="add">
+  <ion-icon name="add-circle" color="light" style="zoom:2.0;"></ion-icon>
+  <ion-label style="margin-left: 10px;">
+    <h1>Agregar Subcategoria</h1>
+  </ion-label>
+</ion-item>
+<div class="contenedor" *ngIf="subCategorias.length == 0 ">   <app-spinner ></app-spinner></div>
+<div *ngIf="subCategorias.length > 0 ">
+<ion-list class="animate__animated animate__fadeInUp" *ngFor="let subCategoria of subCategorias">
+  <ion-list-header>
+   {{subCategoria.nombre}}
+   <ion-label style="margin-left: 10px;"><ion-button (click)="actualizarEstado(subCategoria)" *ngIf="subCategoria.estado" color="success" slot="end" fill='solid'>Activo
+  </ion-button>
+  <ion-button (click)="actualizarEstado(subCategoria)" *ngIf="!subCategoria.estado" color="danger" slot="end" fill='solid'>Inactivo
+  </ion-button>
+  <ion-button (click)="editarSubCategoria(subCategoria)" color="warning" slot="start" fill='solid'>Editar</ion-button>
+  <ion-button (click)="eliminarSubCategoria(subCategoria.id)" color="danger" slot="end" fill='solid'>Eliminar
+  </ion-button>
+</ion-label>
+  </ion-list-header>
+  
+  <app-items [subCategoria]="subCategoria.id"></app-items>
+</ion-list></div>

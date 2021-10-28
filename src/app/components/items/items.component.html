@@ -1,0 +1,41 @@
+<ion-item detail class="add" (click)="presentModal()"> 
+  <ion-icon name="add-circle" color="light" style="zoom:2.0;"></ion-icon>
+  <ion-label style="margin-left: 10px;">
+    <h1>Agregar Plato</h1>
+  </ion-label>
+</ion-item>
+<ion-item   *ngFor="let plato of platos">
+  <ion-avatar slot="start">
+    <img [src]="plato.imagen | imagen">
+  </ion-avatar>
+  <ion-label>
+    <h2>{{plato.nombre}}</h2>
+    <h2>${{plato.precio}}</h2>
+    <img class="avatar" *ngIf="plato.alergenos[0].valor==true" src="assets/alergenos/Moluscos.png">
+    <img class="avatar" *ngIf="plato.alergenos[1].valor==true" src="assets/alergenos/GranosDeSensamo.png">
+    <img class="avatar" *ngIf="plato.alergenos[2].valor==true" src="assets/alergenos/FrutosDeCascara.png">
+    <img class="avatar" *ngIf="plato.alergenos[3].valor==true" src="assets/alergenos/apio.png">
+    <img class="avatar" *ngIf="plato.alergenos[4].valor==true" src="assets/alergenos/Mostaza.png">
+    <img class="avatar" *ngIf="plato.alergenos[5].valor==true" src="assets/alergenos/Pescado.png">
+    <img class="avatar" *ngIf="plato.alergenos[6].valor==true" src="assets/alergenos/Lacteos.png">
+    <img class="avatar" *ngIf="plato.alergenos[7].valor==true" src="assets/alergenos/Cacahuete.png">
+    <img class="avatar" *ngIf="plato.alergenos[8].valor==true" src="assets/alergenos/soja.png">
+    <img class="avatar" *ngIf="plato.alergenos[9].valor==true" src="assets/alergenos/huevos.png">
+    <img class="avatar" *ngIf="plato.alergenos[10].valor==true" src="assets/alergenos/Crustaceos.png">
+    <img class="avatar" *ngIf="plato.alergenos[11].valor==true" src="assets/alergenos/Gluten.png">
+  <br>
+  <ion-button (click)="actualizarEstado(plato)" *ngIf="plato.estado" color="success" slot="end" fill='solid'>Activo
+  </ion-button>
+  
+  <ion-button (click)="actualizarEstado(plato)" *ngIf="!plato.estado" color="danger" slot="end" fill='solid'>Inactivo
+  </ion-button>
+
+  <ion-button (click)="editarPlato(plato)" color="warning" slot="start" fill='solid'>Editar</ion-button>
+
+  <ion-button (click)="eliminarPlato(plato.id)" color="danger" slot="end" fill='solid'>Eliminar
+  </ion-button>
+  </ion-label>
+  
+ 
+ 
+</ion-item>

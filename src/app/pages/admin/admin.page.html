@@ -1,0 +1,25 @@
+
+<ion-content class="ion-padding  background" >
+  <div class="ion-padding contenedor2 container">
+    <h1>INICIO DE SESIÓN</h1>
+    <h2>Sabor Latino</h2>
+    <div class="contenedor-img">
+    <img style="margin-top: 15px;"  src="assets/logo.jpg" />
+    </div>
+    <div class="form-container">
+      <ion-item>
+        <ion-label    position="floating">Correo</ion-label>
+        <ion-input #email></ion-input>
+      </ion-item>
+      <ion-item style="margin-top: 1rem;">
+        <ion-label  position="floating">Contraseña</ion-label>
+        <ion-input  #password type="password"></ion-input>
+       
+      </ion-item>
+
+      
+      <ion-button expand="block" class="main-button" (click)="onLogin(email,password)">Login</ion-button>
+     
+    </div>
+  </div>
+</ion-content>

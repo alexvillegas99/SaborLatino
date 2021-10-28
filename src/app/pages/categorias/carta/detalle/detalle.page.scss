@@ -1,0 +1,28 @@
+ion-toolbar {
+   
+    --background: rgba(var(--ion-color-dark-rgb), 0.8) !important;
+    color: white;
+  }
+body{
+    background-color:black !important;
+}
+label{
+    color:white;
+}
+.img-prod{
+  
+    --border-radius: 20% !important;
+}
+.avatar{
+width: 35px;
+height: 35px;
+border-radius:50%;
+margin-left: 5px;
+}
+ion-img {
+    border-radius: 50px !important;
+    overflow: hidden;
+    width: 75%;
+    height:75%;
+    margin:auto;
+  }

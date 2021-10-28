@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "saborlatino-8e845"
+  },
+  "targets": {
+    "saborlatino-8e845": {
+      "hosting": {
+        "app": [
+          "saborlatino-8e845"
+        ]
+      }
+    }
+  }
+}

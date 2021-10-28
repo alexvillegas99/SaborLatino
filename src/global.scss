@@ -1,0 +1,91 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+
+.cuerpo{
+    /*ui gradients*/
+    --background: #0575E6;  /* fallback for old browsers */
+--background: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+--background: linear-gradient(to right, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.btn-principal{
+    height: 3.125rem;
+    background-color: rgb(51,51,51);
+    border-color: rgba(0,0,0,0.1);
+    color: white;
+    /*Google fonts*/
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+.titulo{
+    font-family: 'Montserrat', sans-serif;
+}
+.contenedor{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 80vh;
+}
+ion-toolbar {
+    padding: 0px;
+    --background: rgba(var(--ion-color-dark-rgb), 0.8) !important;
+    color: white;
+    
+  }
+
+  ion-segment-button {
+    --color: white !important;
+    --color-checked: black;
+    --color-focused: black !important;
+    --indicator-color:#b5b5b5;
+
+  }
+
+  .background {
+    --background: url('assets/fondo.jfif') 0 0/100% 100% no-repeat;
+  
+  }
+  ion-list {
+    
+    border: black 0px;
+    background: rgba(var(--ion-color-dark-rgb), 0) !important;
+  }
+  
+ 
+  ion-item {
+    padding: 0px;
+    --background: rgba(var(--ion-color-dark-rgb), 0.8) !important;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    --color-hover:white !important;
+  }
+  .add{
+    border-width: 2px; border-style: dashed; border-color: white ; 
+  }

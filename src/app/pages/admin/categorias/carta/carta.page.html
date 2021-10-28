@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+   <ion-buttons slot="start">
+      <ion-button [routerLink]="['../../../categorias']" routerLinkActive="router-link-active" >
+        <ion-icon name="arrow-back-outline" color="black"></ion-icon>
+      </ion-button>
+    </ion-buttons> 
+    <ion-title > SABOR LATINO </ion-title>
+    <ion-buttons slot="end"  style="text-align: center">
+      <ion-button (click)="cerrarSesion()" color="danger" fill="solid">
+        <ion-icon name="log-out"></ion-icon>
+      Cerrar Sesión
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen class="ion-padding background " >
+ 
+<app-lista [subCategorias]="subCategorias" [categoria]="categoria"></app-lista>
+  </ion-content>

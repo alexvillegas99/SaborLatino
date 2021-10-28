@@ -1,0 +1,26 @@
+:root {
+    --ion-safe-area-top: 20px;
+    --ion-safe-area-bottom: 22px;
+  }
+
+  p{
+      color: white;
+  }
+
+  ion-list-header{
+      color: white;
+      font-weight: bold;
+      font-size: 30px;
+  }
+
+  .cont{
+      text-align: center;
+  }
+
+  .contenedor2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+}

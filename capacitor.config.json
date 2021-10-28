@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "saborLatino",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+   <ion-buttons slot="start">
+      <ion-button (click)="dismiss()">
+        <ion-icon name="arrow-back-outline" color="black"></ion-icon>
+      </ion-button>
+    </ion-buttons> 
+    <ion-title > Editar Plato </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding  background" >
+  <ion-item >
+    <ion-label>Nombre: </ion-label>
+    <ion-input [(ngModel)]="nombre" type="text" placeholder="Nombre" required></ion-input>
+  </ion-item>
+  <ion-item >
+    <ion-label>Descripción 1: </ion-label>
+    <ion-input [(ngModel)]="descripcion1" type="text" placeholder="Descripción" required></ion-input>
+  </ion-item>
+  
+    <ion-item >
+      <ion-label>Descripción 2: </ion-label>
+      <ion-input [(ngModel)]="descripcion2" type="text" placeholder="Descripción" ></ion-input>
+    </ion-item>
+    <ion-item >
+      <ion-label>Precio: </ion-label>
+      <ion-input [(ngModel)]="precio" type="number" placeholder="0.00" required></ion-input>
+    </ion-item>
+    <ion-item >
+      <input style="left: 0px;" type="file" name="inputFile" (change)="chooseFile($event)" require>
+      </ion-item>
+    <ion-item *ngFor="let alergeno of plato.alergenos" >
+      <ion-label>{{alergeno.nombre}}</ion-label>
+      <ion-checkbox slot="end" [(ngModel)]="alergeno.valor"></ion-checkbox>
+    </ion-item>
+    
+  <ion-button (click)="editar()" color="success" expand="block" >
+    Editar
+  </ion-button>
+  <ion-button expand="block" color="danger" (click)="dismiss()" routerLinkActive="router-link-active" >
+    Cancelar
+  </ion-button>
+</ion-content>

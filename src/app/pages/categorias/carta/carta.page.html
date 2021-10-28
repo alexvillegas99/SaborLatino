@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+   <ion-buttons slot="start">
+      <ion-button [routerLink]="['/categorias']" routerLinkActive="router-link-active" >
+        <ion-icon name="arrow-back-outline" color="black"></ion-icon>
+      </ion-button>
+    </ion-buttons> 
+    <ion-title > SABOR LATINO </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="ion-padding background " >
+  <div class="contenedor" *ngIf="subCategorias.length == 0 ">   <app-spinner ></app-spinner></div>
+<div *ngIf="subCategorias.length > 0 ">
+  <ion-list class="animate__animated animate__fadeInUp" *ngFor="let subCategoria of subCategorias">
+    <ion-list-header>
+     {{subCategoria.nombre}}
+    </ion-list-header>
+    <app-items-cliente [subCategoria]="subCategoria.id"></app-items-cliente>
+  </ion-list>
+</div>
+</ion-content>

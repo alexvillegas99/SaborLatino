@@ -1,0 +1,10 @@
+{
+  "name": "Sabor Latino",
+  "integrations": {
+    "capacitor": {
+      "enabled": false
+    },
+    "cordova": {}
+  },
+  "type": "angular"
+}

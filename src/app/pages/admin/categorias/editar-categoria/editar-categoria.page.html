@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+   <ion-buttons slot="start">
+      <ion-button (click)="dismiss()">
+        <ion-icon name="arrow-back-outline" color="black"></ion-icon>
+      </ion-button>
+    </ion-buttons> 
+    <ion-title > Editar categoria </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+  <ion-content class="ion-padding  background" >
+    <ion-item color="dark">
+      <ion-label>Nombre: </ion-label>
+      <ion-input [(ngModel)]="nombre" type="text" placeholder="Nombre" required></ion-input>
+    </ion-item>
+    <ion-item color="dark">
+      <ion-label>Descripción: </ion-label>
+      <ion-input [(ngModel)]="descripcion" type="text" placeholder="Descripción" required></ion-input>
+    </ion-item>
+    <ion-item color="dark">
+    
+    <input style="left: 0px;" type="file" name="inputFile" (change)="chooseFile($event)" require>
+    </ion-item>
+    <ion-button (click)="editar()" color="success" expand="block" >
+      Editar
+    </ion-button>
+    <ion-button expand="block" color="danger" (click)="dismiss()" routerLinkActive="router-link-active" >
+      Cancelar
+    </ion-button>
+  </ion-content>
