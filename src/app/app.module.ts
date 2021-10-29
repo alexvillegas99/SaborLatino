@@ -17,6 +17,10 @@ import { environment } from 'src/environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { ComponentsModule } from './components/components.module';
+import { HttpClientModule } from "@angular/common/http";
+//Email
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -28,7 +32,10 @@ import { ComponentsModule } from './components/components.module';
     AngularFireAuthModule,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(),
-    ComponentsModule
+    ComponentsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    
      // ToastrModule added
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
