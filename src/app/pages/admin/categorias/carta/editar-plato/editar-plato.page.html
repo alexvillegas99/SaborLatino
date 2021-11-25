@@ -31,11 +31,13 @@
     <ion-item >
       <input style="left: 0px;" type="file" name="inputFile" (change)="chooseFile($event)" require>
       </ion-item>
+      <ion-list-header >
+        <ion-label style="font-size: 20px; color: white;font-weight: bold;">Alergenos</ion-label>
+      </ion-list-header>
     <ion-item *ngFor="let alergeno of plato.alergenos" >
-      <ion-label>{{alergeno.nombre}}</ion-label>
-      <ion-checkbox slot="end" [(ngModel)]="alergeno.valor"></ion-checkbox>
+      <ion-label>{{alergeno.nombre}}</ion-label>    
+      <ion-toggle [(ngModel)]="alergeno.valor" color="success"></ion-toggle>
     </ion-item>
-    
   <ion-button (click)="editar()" color="success" expand="block" >
     Editar
   </ion-button>

@@ -35,9 +35,10 @@
     <ion-list-header >
       <ion-label style="font-size: 20px; color: white;font-weight: bold;">Alergenos</ion-label>
     </ion-list-header>
+ 
     <ion-item *ngFor="let alergeno of alergenos" >
-      <ion-label>{{alergeno.nombre}}</ion-label>
-      <ion-checkbox slot="end" [(ngModel)]="alergeno.valor"></ion-checkbox>
+      <ion-label>{{alergeno.nombre}}</ion-label>    
+      <ion-toggle [(ngModel)]="alergeno.valor" color="success"></ion-toggle>
     </ion-item>
   </ion-list>
   <ion-button (click)="agregar()" color="success" expand="block" >

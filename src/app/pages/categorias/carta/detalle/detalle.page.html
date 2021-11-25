@@ -10,14 +10,14 @@
     <ion-img   [src]="plato.imagen | imagen"></ion-img>
      
   <ion-item  style="margin-top:10px;"> 
-   <label>  Nombre: <h6>{{plato?.nombre}}</h6></label>
+   <label>  Nombre: {{plato?.nombre}} </label>
   </ion-item>
 
-   <ion-item >
+   <ion-item *ngIf="plato.descripcion1!='' || plato.descripcion2!=''">
      <label> Descripción: 
       <h6>{{plato?.descripcion1}}</h6>
       <h6>{{plato?.descripcion2}}</h6>
-        </label>
+    </label>
        
    </ion-item>
    <ion-item >

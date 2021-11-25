@@ -1,11 +1,11 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar >
     <ion-title>email</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <form class="contact-form" (submit)="sendEmail($event)">
+ <!--  <form class="contact-form" (submit)="sendEmail($event)">
     <label>nombre</label>
     <input type="text" name="nombre">
     <label>personas</label>
@@ -15,4 +15,31 @@
     <textarea name="fecha"></textarea>
     <input type="submit" value="Send">
 </form>
+ -->
+ <div class="splitview skewed">
+    <div class="panel bottom">
+        <div class="content">
+            <div class="description">
+                <h1>The original image.</h1>
+                <p>This is how the image looks like before applying a duotone effect.</p>
+            </div>
+
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/original-image.jpg" alt="Original">
+        </div>
+    </div>
+
+    <div class="panel top">
+        <div class="content">
+            <div class="description">
+                <h1>The duotone image.</h1>
+                <p>This is how the image looks like after applying a duotone effect.</p>
+            </div>
+
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/duotone-image.jpg" alt="Duotone">
+        </div>
+    </div>
+
+    <div class="handle"></div>
+</div>
+
 </ion-content>
